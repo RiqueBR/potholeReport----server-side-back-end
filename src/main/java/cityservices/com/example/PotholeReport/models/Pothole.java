@@ -4,25 +4,25 @@ package cityservices.com.example.PotholeReport.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "potholes")
+@Table(name="potholes")
 public class Pothole {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "diameter")
     private int diameter;
 
     @Column(name = "location")
-    private String lcoation;
+    private String location;
 
     @Column(name = "image")
     private String image;
 
-    public Pothole(int diameter, String lcoation, String image) {
+    public Pothole(int diameter, String location, String image) {
         this.diameter = diameter;
-        this.lcoation = lcoation;
+        this.location = location;
         this.image = image;
     }
 
@@ -37,12 +37,12 @@ public class Pothole {
         this.diameter = diameter;
     }
 
-    public String getLcoation() {
-        return lcoation;
+    public String getLocation() {
+        return location;
     }
 
-    public void setLcoation(String lcoation) {
-        this.lcoation = lcoation;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public String getImage() {

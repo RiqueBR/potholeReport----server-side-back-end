@@ -18,11 +18,14 @@ public class PotholeController {
     @Autowired
     PotholeRepository potholeRepository;
 
+
+    // GET All
     @GetMapping
     public List<Pothole> getAllPotholes(){
         return potholeRepository.findAll();
     }
 
+    // GET One
     @GetMapping("{id}")
     public Optional<Pothole> getPothole(@PathVariable Long id){
         return potholeRepository.findById(id);

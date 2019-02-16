@@ -9,7 +9,7 @@ public class Pothole {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long Id;
 
     @Column(name = "diameter")
     private int diameter;
@@ -20,11 +20,13 @@ public class Pothole {
     @Column(name = "image")
     private String image;
 
+
     public Pothole(int diameter, String location, String image) {
         this.diameter = diameter;
         this.location = location;
         this.image = image;
     }
+
 
     public Pothole() {
     }
@@ -53,11 +55,12 @@ public class Pothole {
         this.image = image;
     }
 
+
     public Long getId() {
-        return id;
+        return Id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(Long Id) {
+        this.Id = Id;
     }
 }

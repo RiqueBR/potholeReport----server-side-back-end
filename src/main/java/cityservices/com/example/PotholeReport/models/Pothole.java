@@ -17,18 +17,26 @@ public class Pothole {
     @Column(name = "location")
     private String location;
 
-    @Column(name = "image")
-    private String image;
+    @Column(name = "description")
+    private String description;
 
 
-    public Pothole(int diameter, String location, String image) {
+    public Pothole(int diameter, String location, String description) {
         this.diameter = diameter;
         this.location = location;
-        this.image = image;
+        this.description = description;
     }
 
 
     public Pothole() {
+    }
+
+    public Long getId() {
+        return Id;
+    }
+
+    public void setId(Long Id) {
+        this.Id = Id;
     }
 
     public int getDiameter() {
@@ -47,20 +55,11 @@ public class Pothole {
         this.location = location;
     }
 
-    public String getImage() {
-        return image;
+    public String getDescription() {
+        return description;
     }
 
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-
-    public Long getId() {
-        return Id;
-    }
-
-    public void setId(Long Id) {
-        this.Id = Id;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

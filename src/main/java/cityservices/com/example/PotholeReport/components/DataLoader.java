@@ -19,16 +19,16 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args) throws Exception {
 
-        Pothole pothole1 = new Pothole(10, "Dumbarton Rd", "image 1");
+        Pothole pothole1 = new Pothole(10, "Dumbarton Rd", "Across Cafe Monza");
         potholeRepository.save(pothole1);
 
-        Pothole pothole2 = new Pothole(5,"Buchanan St", "image2");
+        Pothole pothole2 = new Pothole(5,"Buchanan St", "Near Buchanan Galleries");
         potholeRepository.save(pothole2);
 
-        Pothole pothole3 = new Pothole(3, "Denninston Dr.", "image 3");
+        Pothole pothole3 = new Pothole(3, "Denninston Dr.", "Around the corner from Sainsburys");
         potholeRepository.save(pothole3);
 
-        Pothole pothole4 = new Pothole(12,"Hyndland St", "image4");
+        Pothole pothole4 = new Pothole(12,"Hyndland St", "Near Cottiers");
         potholeRepository.save(pothole4);
     }
 }
